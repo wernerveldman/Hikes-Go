@@ -12,6 +12,10 @@
   h1{
   color: rgba(192, 57, 43,1.0);
   }
+  #map{
+  width: 100%;
+  height: 300px;
+    }
     
   </style>
 </head>
@@ -22,8 +26,47 @@
           <h1>Welkom bij Sinterkerst Go!</h1>
           <p>We snappen het goed jullie hebben natuurlijk zin in een koud biertje. Deze is zeker ook ingekocht, maar voor het zover is moeten jullie nog wel het een en ander doen.</p>
           <img class='pokeimg' src='Pokeball_bauble_1024x1024.jpg' />
+          <div id='map'></div>
         </div>
       </div>
     </div>      
-</body>
+<script>
+  function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 6
+        });
+        var infoWindow = new google.maps.InfoWindow({map: map});
+
+        // Try HTML5 geolocation.
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            };
+
+            infoWindow.setPosition(pos);
+            infoWindow.setContent('Location found.');
+            map.setCenter(pos);
+          }, function() {
+            handleLocationError(true, infoWindow, map.getCenter());
+          });
+        } else {
+          // Browser doesn't support Geolocation
+          handleLocationError(false, infoWindow, map.getCenter());
+        }
+      }
+
+      function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+        infoWindow.setPosition(pos);
+        infoWindow.setContent(browserHasGeolocation ?
+                              'Error: The Geolocation service failed.' :
+                              'Error: Your browser doesn\'t support geolocation.');
+      }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDOX7D1FihCy5n4GXKkpulbi83DY1oEqlk">
+    </script>
+  
+  </body>
 </html>
