@@ -5,8 +5,28 @@ $( document ).ready(function() {
           zoom: 15
         });
         
-       $.ajax({url: 'locations.xml', dataType : 'xml', success: function(data){     
-       var infoWindow = new google.maps.InfoWindow({map: map});
+       $.ajax({url: 'locations.xml', dataType : 'xml', success: function(data){
+       var markers = data.documentElement.getElementsByTagName("marker");
+       for (var i = 0; i < markers.length; i++) {
+        var id = markers[i].getAttribute("id");
+        var lat = markers[i].getAttribute("lat");
+        var lon = markers[i].getAttribute("lon");
+        var next = markers[i].getAttribute("next");        
+        var text = markers[i].getAttribute("text");        
+       
+          var gettingClose = new google.maps.Circle({
+            strokeColor: '#27ae60',
+            strokeOpacity: 0.8,
+            strokeWeight: 2,
+            fillColor: '#2ecc71',
+            fillOpacity: 0.35,
+            map: map,
+            radius: 500
+          });        
+        var naar =  new google.maps.LatLng(lat, lon);  
+        gettingClose.setCenter(naar);
+       }        
+  
         var dot = {
             url: '1480436216_bullet-red.png',
             anchor: new google.maps.Point(16, 16)
@@ -15,17 +35,8 @@ $( document ).ready(function() {
             map: map,
             icon: dot
         });
-        var gettingClose = new google.maps.Circle({
-            strokeColor: '#27ae60',
-            strokeOpacity: 0.8,
-            strokeWeight: 2,
-            fillColor: '#2ecc71',
-            fillOpacity: 0.35,
-            map: map,
-            radius: 500
-          });
-    
-        var naar =  new google.maps.LatLng(52.598694,6.3965376); 
+              
+        
     
         // Try HTML5 geolocation.
         if (navigator.geolocation) {
@@ -38,7 +49,7 @@ $( document ).ready(function() {
             var pos2 = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
                       
             currLocation.setPosition(pos);
-            gettingClose.setCenter(naar);
+
             
             map.setCenter(pos);
             var afstand = google.maps.geometry.spherical.computeDistanceBetween(pos2,naar);
