@@ -42,7 +42,7 @@ $( document ).ready(function() {
                             fillColor: '#2ecc71',
                             fillOpacity: 0.35,
                             map: map,
-                            radius: 500
+                            radius: 0
                           });
                        circles.push(gettingClose);        
                        gettingClose.setCenter(naar);
@@ -73,7 +73,7 @@ $( document ).ready(function() {
                                                if (afstand <= 500){
                                                circles[i].setRadius(300);
                                                } else {
-                                               circles[i].setRadius(300);
+                                               circles[i].setRadius(0);
                                                }
                                                if (afstand <=300){
                                                $(".coobox").html(next);
