@@ -23,8 +23,9 @@ $( document ).ready(function() {
             map: map,
             radius: 500
           });        
-        var naar =  new google.maps.LatLng(lat, lon);  
-        gettingClose.setCenter(naar);
+        var naar = new google.maps.LatLng(lat, lon);  
+        console.log(naar);
+               gettingClose.setCenter(naar);
        }        
   
         var dot = {
