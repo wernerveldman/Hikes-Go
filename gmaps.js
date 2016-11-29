@@ -52,9 +52,7 @@ $( document ).ready(function() {
                        }          
                   
                   
-              watchCurrentPosition();    
-            
-                        function watchCurrentPosition() {
+         
                                 var positionTimer = navigator.geolocation.watchPosition(
                                     function (position) {
                                       var pos = {lat: position.coords.latitude,lng: position.coords.longitude};
@@ -79,7 +77,7 @@ $( document ).ready(function() {
                                                }
                                       }        
                                     });
-                        }
+                        
                           
           }, function() {
             handleLocationError(true, infoWindow, map.getCenter());
