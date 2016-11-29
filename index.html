@@ -37,7 +37,10 @@
           zoom: 15
         });
         var infoWindow = new google.maps.InfoWindow({map: map});
-        var dot = '1480436216_bullet-red.png';
+        var dot = {
+            url: '1480436216_bullet-red.png',
+            anchor: new google.maps.Point(10, 10)
+        }
         var currLocation = new google.maps.Marker({
             map: map,
             icon: dot
