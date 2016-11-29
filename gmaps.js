@@ -30,7 +30,8 @@ $( document ).ready(function() {
                         var lng = markers[i].getAttribute("lng");
                         var next = markers[i].getAttribute("next");        
                         var text = markers[i].getAttribute("text");        
-                        var naar = new google.maps.LatLng(lat, lng);         
+                        var naar = new google.maps.LatLng(lat, lng);
+                        var afstand = google.maps.geometry.spherical.computeDistanceBetween(pos2,naar);       
                         var gettingClose = new google.maps.Circle({
                             strokeColor: '#27ae60',
                             strokeOpacity: 0.8,
@@ -38,10 +39,13 @@ $( document ).ready(function() {
                             fillColor: '#2ecc71',
                             fillOpacity: 0.35,
                             map: map,
-                            radius: 500
+                            radius: 0
                           });
-                        gettingClose.setCenter(naar);
-                       var afstand = google.maps.geometry.spherical.computeDistanceBetween(pos2,naar);
+                       gettingClose.setCenter(naar);
+                       if (afstand <= 500){
+                       gettingClose.setRadius(300);
+                       }
+    
                        console.log(afstand);
                        }          
                   
