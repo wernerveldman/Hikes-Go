@@ -5,7 +5,35 @@ $( document ).ready(function() {
           zoom: 15
         });
         
-       $.ajax({url: 'locations.xml', dataType : 'xml', success: function(data){  
+                           
+            
+        // Try HTML5 geolocation.
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            navigator.geolocation.watchPosition(geofench);      
+           
+  
+                  
+          }, function() {
+            handleLocationError(true, infoWindow, map.getCenter());
+          });
+        } else {
+          // Browser doesn't support Geolocation
+          handleLocationError(false, infoWindow, map.getCenter());
+        }
+ 
+      });
+      
+
+      function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+        infoWindow.setPosition(pos);
+        infoWindow.setContent(browserHasGeolocation ?
+                              'Error: The Geolocation service failed.' :
+                              'Error: Your browser doesn\'t support geolocation.');
+      }
+
+     function geofench(){
+        $.ajax({url: 'locations.xml', dataType : 'xml', success: function(data){  
         var dot = {
             url: '1480436216_bullet-red.png',
             anchor: new google.maps.Point(16, 16)
@@ -13,11 +41,8 @@ $( document ).ready(function() {
         var currLocation = new google.maps.Marker({
             map: map,
             icon: dot
-        });                      
-            
-        // Try HTML5 geolocation.
-        if (navigator.geolocation) {
-          navigator.geolocation.getCurrentPosition(function(position) {
+        });      
+                          
             var pos = {lat: position.coords.latitude,lng: position.coords.longitude};      
             var pos2 = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);          
             currLocation.setPosition(pos);
@@ -51,29 +76,6 @@ $( document ).ready(function() {
     
                        console.log(afstand);
                        }          
-                  
-                  
-                  
-            
-            
-            if(afstand <= 500){
-            
-            }
-            
-          }, function() {
-            handleLocationError(true, infoWindow, map.getCenter());
-          });
-        } else {
-          // Browser doesn't support Geolocation
-          handleLocationError(false, infoWindow, map.getCenter());
-        }
-       }});  
-      });
-      
 
-      function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-        infoWindow.setPosition(pos);
-        infoWindow.setContent(browserHasGeolocation ?
-                              'Error: The Geolocation service failed.' :
-                              'Error: Your browser doesn\'t support geolocation.');
-      }
+            }});        
+     }
