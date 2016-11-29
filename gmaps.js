@@ -73,9 +73,11 @@ $( document ).ready(function() {
                                                } else {
                                                gettingClose.setRadius(0);
                                                }
-                                               if (afstand <=500){
+                                               if (afstand <=300){
                                                $(".coobox").html(next);
-                                               
+                                               }
+                                               if(text <> "" and afstand <=300){
+                                               $(".txt").html(text);
                                                }
                                               
                                       }        
