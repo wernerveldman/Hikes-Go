@@ -46,7 +46,9 @@
               lat: position.coords.latitude,
               lng: position.coords.longitude
             };
-            computeDistanceBetween(from:pos, to:naar);
+            
+            alert(google.maps.geometry.spherical.computeDistanceBetween(pos,naar));
+            
             infoWindow.setPosition(pos);
             infoWindow.setContent('Location found.');
             map.setCenter(pos);
