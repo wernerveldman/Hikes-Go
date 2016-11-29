@@ -1,4 +1,5 @@
 $( document ).ready(function() {
+        var circles = new Array();
         var map = new google.maps.Map(document.getElementById('map'), {
           center: {lat: 53.1718523, lng: 6.3749349},
           disableDefaultUI: true,
@@ -43,6 +44,7 @@ $( document ).ready(function() {
                             map: map,
                             radius: 500
                           });
+                       circles.push(gettingClose);        
                        gettingClose.setCenter(naar);
                        if (afstand <= 500){
                        gettingClose.setRadius(300);
@@ -67,11 +69,11 @@ $( document ).ready(function() {
                                         var text = markers[i].getAttribute("text");        
                                         var naar = new google.maps.LatLng(lat, lng);
                                         var afstand = google.maps.geometry.spherical.computeDistanceBetween(pos2,naar);        
-                                        gettingClose.setCenter(naar);
+                                        circles[i].setCenter(naar);
                                                if (afstand <= 500){
-                                               gettingClose[i].setRadius(300);
+                                               circles[i].setRadius(300);
                                                } else {
-                                               gettingClose[i].setRadius(300);
+                                               circles[i].setRadius(300);
                                                }
                                                if (afstand <=300){
                                                $(".coobox").html(next);
