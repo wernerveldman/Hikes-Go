@@ -37,7 +37,11 @@
           zoom: 15
         });
         var infoWindow = new google.maps.InfoWindow({map: map});
-        var currLocation = new google.maps.Marker({map: map});
+        var dot = '1480436216_bullet-red.png';
+        var currLocation = new google.maps.Marker({
+            map: map,
+            icon: dot
+        });
         var gettingClose = new google.maps.Circle({
             strokeColor: '#FF0000',
             strokeOpacity: 0.8,
