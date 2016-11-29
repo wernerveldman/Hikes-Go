@@ -75,9 +75,7 @@ $( document ).ready(function() {
                                                }
                                                if (afstand <=500){
                                                $(".coobox").html(next);
-                                               if(text <> ""){
-                                               $(".txt").html(text);
-                                               }
+                                               
                                                }
                                               
                                       }        
