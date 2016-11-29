@@ -1,6 +1,7 @@
 $( document ).ready(function() {
         var map = new google.maps.Map(document.getElementById('map'), {
           center: {lat: 53.1718523, lng: 6.3749349},
+          disableDefaultUI: true,
           zoom: 15
         });
         
