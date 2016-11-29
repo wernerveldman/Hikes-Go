@@ -4,7 +4,7 @@ $( document ).ready(function() {
           disableDefaultUI: true,
           zoom: 15
         });
-        
+       var gettingClose = [];
        $.ajax({url: 'locations.xml', dataType : 'xml', success: function(data){  
         var dot = {
             url: '1480436216_bullet-red.png',
@@ -34,7 +34,7 @@ $( document ).ready(function() {
                         var text = markers[i].getAttribute("text");        
                         var naar = new google.maps.LatLng(lat, lng);
                         var afstand = google.maps.geometry.spherical.computeDistanceBetween(pos2,naar);       
-                        var gettingClose[i] = new google.maps.Circle({
+                        gettingClose[i] = new google.maps.Circle({
                             strokeColor: '#27ae60',
                             strokeOpacity: 0.8,
                             strokeWeight: 2,
