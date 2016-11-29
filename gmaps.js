@@ -57,31 +57,8 @@ $( document ).ready(function() {
                         function watchCurrentPosition() {
                                 var positionTimer = navigator.geolocation.watchPosition(
                                     function (position) {
-                                        for (var i = 0; i < markers.length; i++) {
-                                                var id = markers[i].getAttribute("id");
-                                                var lat = markers[i].getAttribute("lat");
-                                                var lng = markers[i].getAttribute("lng");
-                                                var next = markers[i].getAttribute("next");        
-                                                var text = markers[i].getAttribute("text");        
-                                                var naar = new google.maps.LatLng(lat, lng);
-                                                var afstand = google.maps.geometry.spherical.computeDistanceBetween(pos2,naar);       
-                                                var gettingClose = new google.maps.Circle({
-                                                    strokeColor: '#27ae60',
-                                                    strokeOpacity: 0.8,
-                                                    strokeWeight: 2,
-                                                    fillColor: '#2ecc71',
-                                                    fillOpacity: 0.35,
-                                                    map: map,
-                                                    radius: 0
-                                                  });
-                                               gettingClose.setCenter(naar);
-                                               if (afstand <= 500){
-                                               gettingClose.setRadius(300);
-                                               }
-                                               if (afstand <=500){
-                                               $(".coobox").html(lat);
-                                               }
-                                               }     
+                                      var pos = {lat: position.coords.latitude,lng: position.coords.longitude};  
+                                      currLocation.setPosition(pos);  
                                     });
                         }
                           
