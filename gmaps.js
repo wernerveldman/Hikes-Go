@@ -13,8 +13,8 @@ $( document ).ready(function() {
         var lon = markers[i].getAttribute("lon");
         var next = markers[i].getAttribute("next");        
         var text = markers[i].getAttribute("text");        
-       
-
+        var naar = new google.maps.LatLng(lat, lon);         
+               
        }        
   
         var dot = {
@@ -34,7 +34,7 @@ $( document ).ready(function() {
             map: map,
             radius: 500
           });        
-        var naar = new google.maps.LatLng(lat, lon);  
+
         console.log(naar);
                gettingClose.setCenter(naar);              
         
