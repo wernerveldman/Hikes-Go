@@ -62,9 +62,10 @@
                       
             currLocation.setPosition(pos);
             gettingClose.setCenter(pos);
+            
             map.setCenter(pos);
             var afstand = google.maps.geometry.spherical.computeDistanceBetween(pos2,naar);
-           
+            gettingClose.setRadius(afstand);
             
             
             console.log(afstand);          
