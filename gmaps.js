@@ -5,29 +5,7 @@ $( document ).ready(function() {
           zoom: 15
         });
         
-       $.ajax({url: 'locations.xml', dataType : 'xml', success: function(data){
-       var markers = data.documentElement.getElementsByTagName("marker");
-       for (var i = 0; i < markers.length; i++) {
-        var id = markers[i].getAttribute("id");
-        var lat = markers[i].getAttribute("lat");
-        var lng = markers[i].getAttribute("lng");
-        var next = markers[i].getAttribute("next");        
-        var text = markers[i].getAttribute("text");        
-        var naar = new google.maps.LatLng(lat, lng);         
-       var gettingClose = new google.maps.Circle({
-            strokeColor: '#27ae60',
-            strokeOpacity: 0.8,
-            strokeWeight: 2,
-            fillColor: '#2ecc71',
-            fillOpacity: 0.35,
-            map: map,
-            radius: 500
-          });        
-
-  
-        gettingClose.setCenter(naar);
-       }        
-  
+       $.ajax({url: 'locations.xml', dataType : 'xml', success: function(data){  
         var dot = {
             url: '1480436216_bullet-red.png',
             anchor: new google.maps.Point(16, 16)
@@ -40,21 +18,39 @@ $( document ).ready(function() {
         // Try HTML5 geolocation.
         if (navigator.geolocation) {
           navigator.geolocation.getCurrentPosition(function(position) {
-            var pos = {
-              lat: position.coords.latitude,
-              lng: position.coords.longitude
-            };
-            
-            var pos2 = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
-                      
+            var pos = {lat: position.coords.latitude,lng: position.coords.longitude};      
+            var pos2 = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);          
             currLocation.setPosition(pos);
-
-            
             map.setCenter(pos);
-            var afstand = google.maps.geometry.spherical.computeDistanceBetween(pos2,naar);
+                  
+                  var markers = data.documentElement.getElementsByTagName("marker");
+                       for (var i = 0; i < markers.length; i++) {
+                        var id = markers[i].getAttribute("id");
+                        var lat = markers[i].getAttribute("lat");
+                        var lng = markers[i].getAttribute("lng");
+                        var next = markers[i].getAttribute("next");        
+                        var text = markers[i].getAttribute("text");        
+                        var naar = new google.maps.LatLng(lat, lng);         
+                        var gettingClose = new google.maps.Circle({
+                            strokeColor: '#27ae60',
+                            strokeOpacity: 0.8,
+                            strokeWeight: 2,
+                            fillColor: '#2ecc71',
+                            fillOpacity: 0.35,
+                            map: map,
+                            radius: 500
+                          });
+                        gettingClose.setCenter(naar);
+                       var afstand = google.maps.geometry.spherical.computeDistanceBetween(pos2,naar);
+                       console.log(afstand);
+                       }          
+                  
+                  
+                  
+            
             
             if(afstand <= 500){
-            console.log(afstand);
+            
             }
             
           }, function() {
