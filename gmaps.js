@@ -60,6 +60,7 @@ $( document ).ready(function() {
                                       var pos = {lat: position.coords.latitude,lng: position.coords.longitude};
                                       var pos2 = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);           
                                       currLocation.setPosition(pos);
+                                      map.setCenter(pos);      
                                       for (var i = 0; i < markers.length; i++) {
                                         var lat = markers[i].getAttribute("lat");
                                         var lng = markers[i].getAttribute("lng");
@@ -67,7 +68,7 @@ $( document ).ready(function() {
                                         var text = markers[i].getAttribute("text");        
                                         var naar = new google.maps.LatLng(lat, lng);
                                         var afstand = google.maps.geometry.spherical.computeDistanceBetween(pos2,naar);        
-                                      gettingClose.setCenter(naar);
+                                        gettingClose.setCenter(naar);
                                                if (afstand <= 500){
                                                gettingClose.setRadius(300);
                                                } else {
