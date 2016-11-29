@@ -6,17 +6,26 @@
   <link type='text/css' rel="stylesheet" href="simple-grid.min.css">
   <title>Sinterkerst Go!</title>
   <style type='text/css'>
-  .pokeimg{
-  width: 100%;
-  } 
+
   h1{
   color: rgba(192, 57, 43,1.0);
   }
+
   #map{
   width: 100%;
   height: 600px;
-    }
+  }
+  
+  .pokeimg{
+  width: 100%;
+  } 
     
+  .coobox{
+  background: rgba(52, 73, 94,1.0);
+  border: 2px solid rgba(44, 62, 80,1.0);
+  color: rgba(236, 240, 241,1.0);
+  padding: 5px;
+  }
   </style>
 </head>
 <body>
@@ -25,6 +34,7 @@
         <div class="col-12 center">
           <h1>Welkom bij Sinterkerst Go!</h1>
           <p>We snappen het goed jullie hebben natuurlijk zin in een koud biertje. Deze is zeker ook ingekocht, maar voor het zover is moeten jullie nog wel het een en ander doen.</p>
+          <span class='coobox'>-34.397,150.644</span>
           <!--<img class='pokeimg' src='Pokeball_bauble_1024x1024.jpg' />-->
           <div id='map'></div>
         </div>
@@ -52,7 +62,7 @@
             fillColor: '#2ecc71',
             fillOpacity: 0.35,
             map: map,
-            radius: Math.sqrt(8405837) * 100
+            radius: 500
           });
     
         var naar =  new google.maps.LatLng(52.598694,6.3965376); 
@@ -72,10 +82,11 @@
             
             map.setCenter(pos);
             var afstand = google.maps.geometry.spherical.computeDistanceBetween(pos2,naar);
-            gettingClose.setRadius(afstand);
             
+            if(afstand <= 500){
+            console.log(afstand);
+            }
             
-            console.log(afstand);          
           }, function() {
             handleLocationError(true, infoWindow, map.getCenter());
           });
