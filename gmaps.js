@@ -18,7 +18,7 @@ $( document ).ready(function() {
                
         // Try HTML5 geolocation.
         if (navigator.geolocation) {
-         navigator.geolocation.watchPosition(geoupdate);
+         navigator.geolocation.watchPosition(geoupdate(data));
         } else {
           // Browser doesn't support Geolocation
           handleLocationError(false, infoWindow, map.getCenter());
