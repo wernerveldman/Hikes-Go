@@ -32,7 +32,7 @@ $( document ).ready(function() {
                               'Error: Your browser doesn\'t support geolocation.');
       }
 
-     function geofench(){
+     function geofench(position){
         $.ajax({url: 'locations.xml', dataType : 'xml', success: function(data){  
         var dot = {
             url: '1480436216_bullet-red.png',
