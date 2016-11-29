@@ -14,20 +14,7 @@ $( document ).ready(function() {
         var next = markers[i].getAttribute("next");        
         var text = markers[i].getAttribute("text");        
         var naar = new google.maps.LatLng(lat, lng);         
-        console.log(naar);
-        console.log(lat);
-        console.log(lng);
-       }        
-  
-        var dot = {
-            url: '1480436216_bullet-red.png',
-            anchor: new google.maps.Point(16, 16)
-        }
-        var currLocation = new google.maps.Marker({
-            map: map,
-            icon: dot
-        });
-          var gettingClose = new google.maps.Circle({
+       var gettingClose = new google.maps.Circle({
             strokeColor: '#27ae60',
             strokeOpacity: 0.8,
             strokeWeight: 2,
@@ -38,9 +25,18 @@ $( document ).ready(function() {
           });        
 
   
-        gettingClose.setCenter(naar);              
-        
-    
+        gettingClose.setCenter(naar);
+       }        
+  
+        var dot = {
+            url: '1480436216_bullet-red.png',
+            anchor: new google.maps.Point(16, 16)
+        }
+        var currLocation = new google.maps.Marker({
+            map: map,
+            icon: dot
+        });                      
+            
         // Try HTML5 geolocation.
         if (navigator.geolocation) {
           navigator.geolocation.getCurrentPosition(function(position) {
