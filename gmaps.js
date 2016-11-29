@@ -49,7 +49,7 @@ $( document ).ready(function() {
                        if (afstand <= 500){
                        gettingClose.setRadius(100);
                        }
-                       if (afstand <=200){
+                       if (afstand <=100){
                        $(".coobox").html(next);
                        }
                        }          
@@ -75,7 +75,7 @@ $( document ).ready(function() {
                                                } else {
                                                circles[i].setRadius(0);
                                                }
-                                               if (afstand <=300){
+                                               if (afstand <=100){
                                                $(".coobox").html(next);
                                                }
                                                                                     }        
