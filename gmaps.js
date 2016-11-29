@@ -46,10 +46,10 @@ $( document ).ready(function() {
                           });
                        circles.push(gettingClose);        
                        gettingClose.setCenter(naar);
-                       if (afstand <= 50){
+                       if (afstand <= 500){
                        gettingClose.setRadius(300);
                        }
-                       if (afstand <=500){
+                       if (afstand <=200){
                        $(".coobox").html(next);
                        }
                        }          
@@ -71,7 +71,7 @@ $( document ).ready(function() {
                                         var afstand = google.maps.geometry.spherical.computeDistanceBetween(pos2,naar);        
                                         circles[i].setCenter(naar);
                                                if (afstand <= 50){
-                                               circles[i].setRadius(300);
+                                               circles[i].setRadius(500);
                                                } else {
                                                circles[i].setRadius(0);
                                                }
