@@ -46,7 +46,7 @@
               lat: position.coords.latitude,
               lng: position.coords.longitude
             };
-            var afstand = computeDistanceBetween(from:pos, to:naar);
+            computeDistanceBetween(from:pos, to:naar);
             infoWindow.setPosition(pos);
             infoWindow.setContent('Location found.');
             map.setCenter(pos);
