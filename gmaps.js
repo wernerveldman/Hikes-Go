@@ -34,7 +34,7 @@ $( document ).ready(function() {
                         var text = markers[i].getAttribute("text");        
                         var naar = new google.maps.LatLng(lat, lng);
                         var afstand = google.maps.geometry.spherical.computeDistanceBetween(pos2,naar);       
-                        var gettingClose = new google.maps.Circle({
+                        var gettingClose[i] = new google.maps.Circle({
                             strokeColor: '#27ae60',
                             strokeOpacity: 0.8,
                             strokeWeight: 2,
@@ -67,11 +67,11 @@ $( document ).ready(function() {
                                         var text = markers[i].getAttribute("text");        
                                         var naar = new google.maps.LatLng(lat, lng);
                                         var afstand = google.maps.geometry.spherical.computeDistanceBetween(pos2,naar);        
-                                        gettingClose.setCenter(naar);
+                                        gettingClose[i].setCenter(naar);
                                                if (afstand <= 500){
-                                               gettingClose.setRadius(300);
+                                               gettingClose[i].setRadius(300);
                                                } else {
-                                               gettingClose.setRadius(0);
+                                               gettingClose[i].setRadius(0);
                                                }
                                                if (afstand <=300){
                                                $(".coobox").html(next);
