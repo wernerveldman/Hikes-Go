@@ -41,7 +41,7 @@ $( document ).ready(function() {
                             fillColor: '#2ecc71',
                             fillOpacity: 0.35,
                             map: map,
-                            radius: 0
+                            radius: 500
                           });
                        gettingClose.setCenter(naar);
                        if (afstand <= 500){
@@ -71,7 +71,7 @@ $( document ).ready(function() {
                                                if (afstand <= 500){
                                                gettingClose[i].setRadius(300);
                                                } else {
-                                               gettingClose[i].setRadius(0);
+                                               gettingClose[i].setRadius(300);
                                                }
                                                if (afstand <=300){
                                                $(".coobox").html(next);
