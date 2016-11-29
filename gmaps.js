@@ -4,6 +4,9 @@ $( document ).ready(function() {
           center: {lat: -34.397, lng: 150.644},
           zoom: 15
         });
+        
+        $.ajax({url: "/locations.xml", dataType : 'xml', success: function(data){     
+                
         var infoWindow = new google.maps.InfoWindow({map: map});
         var dot = {
             url: '1480436216_bullet-red.png',
@@ -52,6 +55,7 @@ $( document ).ready(function() {
           // Browser doesn't support Geolocation
           handleLocationError(false, infoWindow, map.getCenter());
         }
+      });
       });
 
       function handleLocationError(browserHasGeolocation, infoWindow, pos) {
