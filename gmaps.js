@@ -1,7 +1,7 @@
 
 $( document ).ready(function() {
         var map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: -34.397, lng: 150.644},
+          center: {lat: 53.1718523, lng: 6.3749349},
           zoom: 15
         });
         
@@ -44,6 +44,9 @@ $( document ).ready(function() {
                        gettingClose.setCenter(naar);
                        if (afstand <= 500){
                        gettingClose.setRadius(300);
+                       }
+                       if (afstand <=500){
+                       $(".coobox").html(next);
                        }
     
                        console.log(afstand);
