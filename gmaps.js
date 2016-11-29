@@ -10,13 +10,13 @@ $( document ).ready(function() {
        for (var i = 0; i < markers.length; i++) {
         var id = markers[i].getAttribute("id");
         var lat = markers[i].getAttribute("lat");
-        var lon = markers[i].getAttribute("lon");
+        var lng = markers[i].getAttribute("lng");
         var next = markers[i].getAttribute("next");        
         var text = markers[i].getAttribute("text");        
-        var naar = new google.maps.LatLng(lat, lon);         
+        var naar = new google.maps.LatLng(lat, lng);         
         console.log(naar);
         console.log(lat);
-        console.log(lon);
+        console.log(lng);
        }        
   
         var dot = {
