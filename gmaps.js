@@ -54,13 +54,20 @@ $( document ).ready(function() {
                        }          
                   
                   
-                  
+              watchCurrentPosition();    
             
             
             if(afstand <= 500){
             
             }
-            
+        function watchCurrentPosition() {
+                var positionTimer = navigator.geolocation.watchPosition(
+                    function (position) {
+                        var pos = {lat: position.coords.latitude,lng: position.coords.longitude};         
+                        currLocation.setPosition(pos);
+                    });
+      }
+                          
           }, function() {
             handleLocationError(true, infoWindow, map.getCenter());
           });
@@ -69,7 +76,10 @@ $( document ).ready(function() {
           handleLocationError(false, infoWindow, map.getCenter());
         }
        }});  
-      });
+       
+     
+
+});
       
 
       function handleLocationError(browserHasGeolocation, infoWindow, pos) {
