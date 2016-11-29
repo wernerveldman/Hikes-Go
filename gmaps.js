@@ -46,7 +46,7 @@ $( document ).ready(function() {
                           });
                        circles.push(gettingClose);        
                        gettingClose.setCenter(naar);
-                       if (afstand <= 1){
+                       if (afstand <= 50){
                        gettingClose.setRadius(300);
                        }
                        if (afstand <=500){
@@ -70,7 +70,7 @@ $( document ).ready(function() {
                                         var naar = new google.maps.LatLng(lat, lng);
                                         var afstand = google.maps.geometry.spherical.computeDistanceBetween(pos2,naar);        
                                         circles[i].setCenter(naar);
-                                               if (afstand <= 1){
+                                               if (afstand <= 50){
                                                circles[i].setRadius(300);
                                                } else {
                                                circles[i].setRadius(0);
