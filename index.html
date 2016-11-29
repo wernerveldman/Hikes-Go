@@ -50,7 +50,9 @@
             infoWindow.setPosition(pos);
             infoWindow.setContent('Location found.');
             map.setCenter(pos);
-            console.log(google.maps.geometry.spherical.computeDistanceBetween(pos,naar));
+            console.log(pos);
+            console.log(naar);
+            console.log(google.maps.geometry.spherical.computeDistanceBetween(pos,naar));          
           }, function() {
             handleLocationError(true, infoWindow, map.getCenter());
           });
