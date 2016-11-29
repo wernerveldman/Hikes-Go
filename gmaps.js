@@ -9,14 +9,7 @@ $( document ).ready(function() {
             
         // Try HTML5 geolocation.
         if (navigator.geolocation) {
-          navigator.geolocation.getCurrentPosition(function(position) {
             navigator.geolocation.watchPosition(geofench);      
-           
-  
-                  
-          }, function() {
-            handleLocationError(true, infoWindow, map.getCenter());
-          });
         } else {
           // Browser doesn't support Geolocation
           handleLocationError(false, infoWindow, map.getCenter());
