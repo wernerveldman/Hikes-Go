@@ -57,8 +57,26 @@ $( document ).ready(function() {
                         function watchCurrentPosition() {
                                 var positionTimer = navigator.geolocation.watchPosition(
                                     function (position) {
-                                      var pos = {lat: position.coords.latitude,lng: position.coords.longitude};  
-                                      currLocation.setPosition(pos);  
+                                      var pos = {lat: position.coords.latitude,lng: position.coords.longitude};
+                                      var pos2 = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);           
+                                      currLocation.setPosition(pos);
+                                      for (var i = 0; i < markers.length; i++) {
+                                        var lat = markers[i].getAttribute("lat");
+                                        var lng = markers[i].getAttribute("lng");
+                                        var next = markers[i].getAttribute("next");        
+                                        var text = markers[i].getAttribute("text");        
+                                        var naar = new google.maps.LatLng(lat, lng);
+                                        var afstand = google.maps.geometry.spherical.computeDistanceBetween(pos2,naar);        
+                                      gettingClose.setCenter(naar);
+                                               if (afstand <= 500){
+                                               gettingClose.setRadius(300);
+                                               } else {
+                                               gettingClose.setRadius(0);
+                                               }
+                                               if (afstand <=500){
+                                               $(".coobox").html(next);
+                                               }
+                                      }        
                                     });
                         }
                           
