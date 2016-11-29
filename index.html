@@ -37,7 +37,8 @@
           zoom: 6
         });
         var infoWindow = new google.maps.InfoWindow({map: map});
-
+        var naar = new google.maps.LatLng({lat: -34.397, lng: 150.644}); 
+    
         // Try HTML5 geolocation.
         if (navigator.geolocation) {
           navigator.geolocation.getCurrentPosition(function(position) {
@@ -45,7 +46,7 @@
               lat: position.coords.latitude,
               lng: position.coords.longitude
             };
-
+            alert(computeDistanceBetween(from:pos, to:naar))
             infoWindow.setPosition(pos);
             infoWindow.setContent('Location found.');
             map.setCenter(pos);
