@@ -14,7 +14,9 @@ $( document ).ready(function() {
         var next = markers[i].getAttribute("next");        
         var text = markers[i].getAttribute("text");        
         var naar = new google.maps.LatLng(lat, lon);         
-               
+        console.log(naar);
+        console.log(lat);
+        console.log(lon);
        }        
   
         var dot = {
@@ -35,8 +37,8 @@ $( document ).ready(function() {
             radius: 500
           });        
 
-        console.log(naar);
-               gettingClose.setCenter(naar);              
+  
+        gettingClose.setCenter(naar);              
         
     
         // Try HTML5 geolocation.
