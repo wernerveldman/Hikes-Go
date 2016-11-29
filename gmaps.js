@@ -6,7 +6,7 @@ $( document ).ready(function() {
         });
         
         $.ajax({url: "locations.xml", dataType : 'xml', success: function(data){     
-                
+        });        
         var infoWindow = new google.maps.InfoWindow({map: map});
         var dot = {
             url: '1480436216_bullet-red.png',
@@ -56,7 +56,7 @@ $( document ).ready(function() {
           handleLocationError(false, infoWindow, map.getCenter());
         }
       });
-      });
+      
 
       function handleLocationError(browserHasGeolocation, infoWindow, pos) {
         infoWindow.setPosition(pos);
