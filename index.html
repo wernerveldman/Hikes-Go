@@ -68,7 +68,7 @@
             var pos2 = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
                       
             currLocation.setPosition(pos);
-            gettingClose.setCenter(pos);
+            gettingClose.setCenter(naar);
             
             map.setCenter(pos);
             var afstand = google.maps.geometry.spherical.computeDistanceBetween(pos2,naar);
