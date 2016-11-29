@@ -37,6 +37,7 @@
           zoom: 6
         });
         var infoWindow = new google.maps.InfoWindow({map: map});
+        var currLocation = new google.maps.Marker({map: map});
         var naar =  new google.maps.LatLng(52.598694,6.3965376); 
     
         // Try HTML5 geolocation.
@@ -51,10 +52,9 @@
            
              
             infoWindow.setPosition(pos);
+            currLocation.setPosition(pos);
             infoWindow.setContent('Location found.');
             map.setCenter(pos);
-            console.log(pos2);
-            console.log(naar);
             var afstand = google.maps.geometry.spherical.computeDistanceBetween(pos2,naar);
             
             console.log(afstand);          
