@@ -6,8 +6,7 @@ $( document ).ready(function() {
         });
         
        $.ajax({url: 'locations.xml', dataType : 'xml', success: function(data){     
-       }});  
-        var infoWindow = new google.maps.InfoWindow({map: map});
+       var infoWindow = new google.maps.InfoWindow({map: map});
         var dot = {
             url: '1480436216_bullet-red.png',
             anchor: new google.maps.Point(16, 16)
@@ -55,6 +54,7 @@ $( document ).ready(function() {
           // Browser doesn't support Geolocation
           handleLocationError(false, infoWindow, map.getCenter());
         }
+       }});  
       });
       
 
