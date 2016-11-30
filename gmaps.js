@@ -47,9 +47,9 @@ $( document ).ready(function() {
                        circles.push(gettingClose);        
                        gettingClose.setCenter(naar);
                        if (afstand <= 500){
-                       gettingClose.setRadius(100);
+                       gettingClose.setRadius(200);
                        }
-                       if (afstand <=100){
+                       if (afstand <=200){
                        $(".coobox").html(next);
                        }
                        }          
@@ -71,11 +71,11 @@ $( document ).ready(function() {
                                         var afstand = google.maps.geometry.spherical.computeDistanceBetween(pos2,naar);        
                                         circles[i].setCenter(naar);
                                                if (afstand <= 500){
-                                               circles[i].setRadius(100);
+                                               circles[i].setRadius(200);
                                                } else {
                                                circles[i].setRadius(0);
                                                }
-                                               if (afstand <=100){
+                                               if (afstand <=200){
                                                $(".coobox").html(next);
                                                }
                                                                                     }        
