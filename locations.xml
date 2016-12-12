@@ -1,10 +1,15 @@
 <?xml version="1.0"?>
 <markers>
-<marker id="1" lat="52.598697" lng="6.3965377" next="53.1554941, 6.3766865" text="Het is tijd voor Sinterkerst Go. Als jullie dit lezen hebben jullie je netjes verzameld bij het clubgebouw. Na het sluiten van dit bericht vinden jullie op deze pagina het coördinaat van de eerste locatie. Hier en ook alleen hier (nou ja in een straal van 200 meter) krijgen jullie het volgende coördinaat. Zo helpen we jullie opweg naar Sinterkerst 2016"/>
-<marker id="2" lat="53.1554941" lng="6.3766866" next="53.239888, 6.599436" text=""/>
-
-<marker id="3" lat="53.2398881" lng="6.5994361" next="53.096485, 6.6909395" text="Welkom bij de activiteit, we zien jullie graag binnen in de Apré Ski."/>    
-
-<marker id="4" lat="53.096485" lng="6.693139" next="53.096485,6.693139" text="We komen in de buurt, horen jullie het bier al roepen?"/>
+<marker id="1" lat="52.598697" lng="6.3965377" next="53.1554941, 6.3766865" text="Het is tijd voor Sinterkerst Go. Als jullie dit lezen hebben jullie je netjes verzameld bij het clubgebouw. Na het sluiten van dit bericht vinden jullie op deze pagina het coördinaat van de eerste locatie. Hier en ook alleen hier (nou ja in een straal van 200 meter) krijgen jullie het volgende coördinaat. Zo helpen we jullie opweg naar Sinterkerst 2016 </br></br> <i>Je kan deze pagina gewoon open laten staan, je locatie wordt vanzelf bijgewerkt.</i>"/>
+<marker id="1" lat="53.171845" lng="6.377133" next="53.190966, 6.413642" text="Het is tijd voor Sinterkerst Go. Als jullie dit lezen hebben jullie je netjes verzameld bij het clubgebouw. Na het sluiten van dit bericht vinden jullie op deze pagina het coördinaat van de eerste locatie. Hier en ook alleen hier (nou ja in een straal van 200 meter) krijgen jullie het volgende coördinaat. Zo helpen we jullie opweg naar Sinterkerst 2016 </br></br> <i>Je kan deze pagina gewoon open laten staan, je locatie wordt vanzelf bijgewerkt.</i>"/>
+<marker id="2" lat="53.190966" lng="6.413642" next="53.215024, 6.501009" text=""/>
+<marker id="3" lat="53.215024" lng="6.501009" next="53.218587, 6.517383" text="Ben jij niet de bestuurder? Dan heb je geluk en zou ik hier binnen lekker even wat bier halen."/>    
+<marker id="4" lat="53.218587" lng="6.517383" next="53.237081, 6.532419" text=""/>
+<marker id="5" lat="53.237081" lng="6.532419" next="53.236820, 6.580752" text=""/>
+<marker id="6" lat="53.236820" lng="6.580752" next="53.239886, 6.599383" text=""/>
+<marker id="7" lat="53.239886" lng="6.599383" next="53.129752, 6.587821" text="De eerste helft hebben jullie gehaald. Het is tijd voor de activiteit, we zien jullie graag binnen in de Apré Ski bar."/>
+<marker id="8" lat="53.129752" lng="6.587821" next="53.079474, 6.582379" text="Helaas geen buitenlands tripje dit jaar, we gaan verder..."/> 
+<marker id="9" lat="53.079474" lng="6.582379" next="53.088887, 6.665314" text=""/>   
+<marker id="" lat="53.088887" lng="6.665314" next="53.096485, 6.693139" text="We komen in de buurt, horen jullie het bier al roepen?"/>
 <marker id="4" lat="53.096485" lng="6.693139" next="" text="Tijd voor eten en bier. Welkom bij de Rangers Zuidlaren."/>
 </markers>
