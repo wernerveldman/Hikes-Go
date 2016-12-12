@@ -77,6 +77,8 @@ $( document ).ready(function() {
                                                }
                                                if (afstand <=200){
                                                $(".coobox").html(next);
+                                               $("#overlay").show();
+                                               $("#overlay").html(text);        
                                                }
                                                                                     }        
                                     });
