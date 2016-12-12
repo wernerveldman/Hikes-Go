@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <markers>
-<marker id="1" lat="52.598697" lng="6.3965377" next="53.1554941, 6.3766865" text="test1"/>
-<marker id="2" lat="53.1554941" lng="6.3766866" next="53.239881, 6.5972005" text="test2"/>
+<marker id="1" lat="52.598697" lng="6.3965377" next="53.1554941, 6.3766865" text="Welkom bij de activiteit, we zien jullie graag binnen in de Apré Ski."/>
+<marker id="2" lat="53.1554941" lng="6.3766866" next="53.239881, 6.5972005" text="Welkom bij de activiteit, we zien jullie graag binnen in de Apré Ski."/>
 <marker id="3" lat="53.239881" lng="6.5972005" next="53.096485, 6.6909395" text="Welkom bij de activiteit, we zien jullie graag binnen in de Apré Ski."/>    
 <marker id="4" lat="53.096485" lng="6.6909395" next="" text="Tijd voor eten en bier. Welkom bij Scouting Zuidlaren."/>
 </markers>
