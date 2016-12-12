@@ -30,6 +30,16 @@
   color: rgba(236, 240, 241,1.0);
   padding: 5px;
   }
+    
+  #overlay{
+  position: absolute;
+  background: #333;
+  left: 9%;
+  top: 9%;
+  width: 90%;
+  height: 90%;
+  }
+    
   </style>
   <script type="text/javascript">
     var host = "go.helemaalnaardeklotentijdenssinterkerst.nl";
@@ -44,7 +54,7 @@
           <h1>Welkom bij Sinterkerst Go!</h1>
           <p class='txt'>We snappen het goed jullie hebben natuurlijk zin in een koud biertje. Deze is zeker ook ingekocht, maar voor het zover is moeten jullie nog wel het een en ander doen.</p>
           <p>De volgende locatie is: <span class='coobox'>...,...</span></p>
-          <!--<img class='pokeimg' src='Pokeball_bauble_1024x1024.jpg' />-->
+          <div id='overlay'></div>
           <div id='map'></div>
         </div>
       </div>
