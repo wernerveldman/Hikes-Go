@@ -49,8 +49,10 @@ $( document ).ready(function() {
                        if (afstand <= 500){
                        gettingClose.setRadius(200);
                        }
-                       if (afstand <=200){
+                       if (afstand <=500){
                        $(".coobox").html(next);
+                       $("#overlay").show();
+                       $("#overlay").html(text);           
                        }
                        }          
                   
