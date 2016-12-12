@@ -52,7 +52,7 @@ $( document ).ready(function() {
                        if (afstand <=500){
                        $(".coobox").html(next);
                        $("#overlay").show();
-                       $("#overlay").html("<p>" + text + "</p><span class='close'></span>");                        }
+                       $("#overlay").html("<span class='close'></span><p>" + text + "</p>");                        }
                        }          
                   
                   
@@ -79,7 +79,7 @@ $( document ).ready(function() {
                                                if (afstand <=500){
                                                $(".coobox").html(next);
                                                $("#overlay").show();
-                                               $("#overlay").html("<p>" + text + "</p><span class='close'></span>");        
+                                               $("#overlay").html("<span class='close'></span><p>" + text + "</p>");        
                                                }
                                                                                     }        
                                     });
