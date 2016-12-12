@@ -75,7 +75,7 @@ $( document ).ready(function() {
                                                } else {
                                                circles[i].setRadius(0);
                                                }
-                                               if (afstand <=200){
+                                               if (afstand <=500){
                                                $(".coobox").html(next);
                                                $("#overlay").show();
                                                $("#overlay").html(text);        
