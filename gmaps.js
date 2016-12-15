@@ -78,8 +78,7 @@ $( document ).ready(function() {
                                                circles[i].setRadius(0);
                                                }
                                                if (afstand <=500){
-                                               $(".coobox").html(next);
-                                               alert(date() - scherm_vertr);
+                                               $(".coobox").html(date() - scherm_vertr);
                                                if (date() - scherm_vertr >= 2000){        
                                                scherm_vertr = new date();
                                                $("#overlay").show();
