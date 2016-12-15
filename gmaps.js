@@ -51,9 +51,12 @@ $( document ).ready(function() {
                        gettingClose.setRadius(200);
                        }
                        if (afstand <= 500){
-                       $(".coobox").html(next);
-                       $("#overlay").show();
-                       $("#overlay").html("<span class='close'>sluiten</span><p>" + text + "</p>");                        }
+                                $(".coobox").html(date() - scherm_vertr);
+                                               if (date() - scherm_vertr >= 2000){        
+                                               scherm_vertr = new date();
+                                               $("#overlay").show();
+                                               $("#overlay").html("<span class='close'>sluiten</span><p>" + text + "</p>");    
+                                               }
                        }          
                   
                   
