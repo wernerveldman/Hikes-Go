@@ -51,7 +51,7 @@ $( document ).ready(function() {
                        gettingClose.setRadius(200);
                        }
                        if (afstand <= 200){
-                       $(".coobox").html(next);
+                       $(".coobox").html("<a href='http://maps.apple.com/?q=" + next + "'>" + next + "</a>");
                        if (!text == ""){
                        $("#overlay").show();
                        $("#overlay").html("<span class='close'>sluiten</span><p>" + text + "</p>");                        }
@@ -81,7 +81,7 @@ $( document ).ready(function() {
                                                circles[i].setRadius(0);
                                                }
                                                if (afstand <=200){
-                                               $(".coobox").html(next);
+                                               $(".coobox").html("<a href='http://maps.apple.com/?q=" + next + "'>" + next + "</a>");
                                                var datum = new Date();
                                                                                              
                                                if ((datum - scherm_vertr) >= (60000)){        
