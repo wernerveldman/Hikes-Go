@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-        var scherm_vertr
+        var scherm_vertr = 0;
         var circles = new Array();
         var map = new google.maps.Map(document.getElementById('map'), {
           center: {lat: 53.1718523, lng: 6.3749349},
