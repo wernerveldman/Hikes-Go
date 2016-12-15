@@ -52,9 +52,11 @@ $( document ).ready(function() {
                        }
                        if (afstand <= 500){
                        $(".coobox").html(next);
+                       if (!text == ""){
                        $("#overlay").show();
                        $("#overlay").html("<span class='close'>sluiten</span><p>" + text + "</p>");                        }
-                       }          
+                       
+                       }}          
                         
                   
          
@@ -81,13 +83,10 @@ $( document ).ready(function() {
                                                if (afstand <=500){
                                                $(".coobox").html(next);
                                                var datum = new Date();
-                                               console.log(datum);
-                                               console.log(scherm_vertr);
-                                               console.log(datum - scherm_vertr);
-                                               
+                                                                                             
                                                if ((datum - scherm_vertr) >= (60000)){        
                                                scherm_vertr = new Date();
-                                               if (text > ""){
+                                               if (!text == ""){
                                                $("#overlay").show();
                                                $("#overlay").html("<span class='close'>sluiten</span><p>" + text + "</p>");        
                                                }
