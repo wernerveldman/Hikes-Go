@@ -87,8 +87,10 @@ $( document ).ready(function() {
                                                
                                                if ((datum - scherm_vertr) >= (60000)){        
                                                scherm_vertr = new Date();
+                                               if (text <> ""){
                                                $("#overlay").show();
                                                $("#overlay").html("<span class='close'>sluiten</span><p>" + text + "</p>");        
+                                               }
                                                }
                                                }
                                                }        
