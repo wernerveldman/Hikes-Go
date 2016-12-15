@@ -51,13 +51,10 @@ $( document ).ready(function() {
                        gettingClose.setRadius(200);
                        }
                        if (afstand <= 500){
-                                $(".coobox").html(date() - scherm_vertr);
-                                               if (date() - scherm_vertr >= 2000){        
-                                               scherm_vertr = new date();
-                                               $("#overlay").show();
-                                               $("#overlay").html("<span class='close'>sluiten</span><p>" + text + "</p>");    
-                                               }
-                       }  }        
+                       $(".coobox").html(next);
+                       $("#overlay").show();
+                       $("#overlay").html("<span class='close'>sluiten</span><p>" + text + "</p>");                        }
+                       }          
                   
                   
          
@@ -81,7 +78,7 @@ $( document ).ready(function() {
                                                circles[i].setRadius(0);
                                                }
                                                if (afstand <=500){
-                                               $(".coobox").html(date() - scherm_vertr);
+                                               $(".coobox").html(next);
                                                if (date() - scherm_vertr >= 2000){        
                                                scherm_vertr = new date();
                                                $("#overlay").show();
@@ -113,5 +110,3 @@ $( document ).ready(function() {
                               'Error: The Geolocation service failed.' :
                               'Error: Your browser doesn\'t support geolocation.');
       }
-
-
