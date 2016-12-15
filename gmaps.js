@@ -80,14 +80,15 @@ $( document ).ready(function() {
                                                }
                                                if (afstand <=500){
                                                $(".coobox").html(next);
-                                                var datum = new Date();
+                                               var datum = new Date();
+                                               console.log(datum - scherm_vertr);
                                                if ((datum - scherm_vertr) >= 2000){        
                                                scherm_vertr = new Date();
                                                $("#overlay").show();
                                                $("#overlay").html("<span class='close'>sluiten</span><p>" + text + "</p>");        
                                                }
                                                }
-                                                                                    }        
+                                               }        
                                     });
                         
                           
