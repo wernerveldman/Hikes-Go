@@ -50,7 +50,7 @@ $( document ).ready(function() {
                        if (afstand <= 500){
                        gettingClose.setRadius(200);
                        }
-                       if (afstand <= 500){
+                       if (afstand <= 200){
                        $(".coobox").html(next);
                        if (!text == ""){
                        $("#overlay").show();
@@ -80,7 +80,7 @@ $( document ).ready(function() {
                                                } else {
                                                circles[i].setRadius(0);
                                                }
-                                               if (afstand <=500){
+                                               if (afstand <=200){
                                                $(".coobox").html(next);
                                                var datum = new Date();
                                                                                              
