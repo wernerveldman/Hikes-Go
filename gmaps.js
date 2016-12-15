@@ -1,4 +1,5 @@
 $( document ).ready(function() {
+        var scherm_vertr
         var circles = new Array();
         var map = new google.maps.Map(document.getElementById('map'), {
           center: {lat: 53.1718523, lng: 6.3749349},
@@ -78,8 +79,11 @@ $( document ).ready(function() {
                                                }
                                                if (afstand <=200){
                                                $(".coobox").html(next);
+                                               if (date() - scherm_vertr >= 2000){        
+                                               scherm_vertr = new date();
                                                $("#overlay").show();
                                                $("#overlay").html("<span class='close'>sluiten</span><p>" + text + "</p>");        
+                                               }
                                                }
                                                                                     }        
                                     });
