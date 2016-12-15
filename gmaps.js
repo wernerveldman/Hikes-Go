@@ -55,7 +55,7 @@ $( document ).ready(function() {
                        $("#overlay").show();
                        $("#overlay").html("<span class='close'>sluiten</span><p>" + text + "</p>");                        }
                        }          
-                        console.log((date() - scherm_vertr));
+                        
                   
          
                                 var positionTimer = navigator.geolocation.watchPosition(
@@ -71,7 +71,8 @@ $( document ).ready(function() {
                                         var text = markers[i].getAttribute("text");        
                                         var naar = new google.maps.LatLng(lat, lng);
                                         var afstand = google.maps.geometry.spherical.computeDistanceBetween(pos2,naar);        
-                                        circles[i].setCenter(naar);
+                                        
+                                              circles[i].setCenter(naar);
                                                if (afstand <= 500){
                                                circles[i].setRadius(200);
                                                } else {
@@ -79,8 +80,8 @@ $( document ).ready(function() {
                                                }
                                                if (afstand <=500){
                                                $(".coobox").html(next);
-                                               console.log(scherm_vertr);
-                                               if ((date() - scherm_vertr) >= 2000){        
+                                                var datum = new date();
+                                               if ((datum - scherm_vertr) >= 2000){        
                                                scherm_vertr = new date();
                                                $("#overlay").show();
                                                $("#overlay").html("<span class='close'>sluiten</span><p>" + text + "</p>");        
