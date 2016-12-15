@@ -79,7 +79,7 @@ $( document ).ready(function() {
                                                }
                                                if (afstand <=500){
                                                $(".coobox").html(next);
-                                               if (date() - scherm_vertr >= 2000){        
+                                               if ((date() - scherm_vertr) >= 2000){        
                                                scherm_vertr = new date();
                                                $("#overlay").show();
                                                $("#overlay").html("<span class='close'>sluiten</span><p>" + text + "</p>");        
