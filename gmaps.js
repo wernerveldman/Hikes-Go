@@ -55,7 +55,7 @@ $( document ).ready(function() {
                        $("#overlay").show();
                        $("#overlay").html("<span class='close'>sluiten</span><p>" + text + "</p>");                        }
                        }          
-                  
+                        console.log((date() - scherm_vertr));
                   
          
                                 var positionTimer = navigator.geolocation.watchPosition(
