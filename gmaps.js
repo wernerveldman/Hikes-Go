@@ -83,7 +83,8 @@ $( document ).ready(function() {
                                                var datum = new Date();
                                                console.log(datum);
                                                console.log(scherm_vertr);
-                                               if ((datum - scherm_vertr) >= 2000){        
+                                               console.log(datum - scherm_vertr);
+                                                       if ((datum - scherm_vertr) >= 2000){        
                                                scherm_vertr = new Date();
                                                $("#overlay").show();
                                                $("#overlay").html("<span class='close'>sluiten</span><p>" + text + "</p>");        
