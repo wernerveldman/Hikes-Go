@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link type='text/css' rel="stylesheet" href="simple-grid.min.css">
+  <title>Sinterkerst</title>
+  <style type='text/css'>
+  h1{
+  color: rgba(192, 57, 43,1.0);
+  }
+  #map{
+  width: 100%;
+  height: 400px;
+  margin-top: 20px;
+  }
+  
+  .pokeimg{
+  width: 100%;
+  } 
+    
+  .coobox{
+  background: rgba(52, 73, 94,1.0);
+  border: 2px solid rgba(44, 62, 80,1.0);
+  color: rgba(236, 240, 241,1.0);
+  padding: 5px;
+  }
+    
+  .butt{
+background: rgba(192, 57, 43,1.0);
+color: #fff;
+padding: 5px;
+border-radius: 5px;
+}
+
+.butt a{
+  color: #fff;
+text-decoration: none;
+}  
+
+.algemenev{
+  background: rgba(236, 240, 241,1.0);
+  padding: 10px;
+  text-align: left;
+font-family: monospace;
+font-size: 10px;
+height: 400px;
+overflow: auto;
+    }
+ .algemenev h2{
+ font-family: monospace;
+font-size: 14px; 
+ }
+     .algemenev p{
+       text-align: justify;
+ font-family: monospace;
+font-size: 12px; 
+ }
+  </style>
+
+</head>
+<body>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 center">
+          <h1>Sinterkerst</h1>
+<h2 id='demo'></h2>
+          <div id='content'></div>
+
+<script>
+  function load(url, element)
+{
+    req = new XMLHttpRequest();
+    req.open("GET", url, false);
+    req.send(null);
+
+    element.innerHTML = req.responseText; 
+}
+  
+  window.setTimeout(cntdown,1);
+  function cntdown(){
+var d = new Date();
+var s = new Date("December 17, 2016 15:00:00");
+
+if (s - d < 0) {
+load("go.html", document.getElementById("content")); 
+document.getElementById("demo").innerHTML = "De tijd is gekomen, tijd voor Sinterkerst GO !";
+}else{
+document.getElementById("demo").innerHTML = Math.round((s - d)/1000) + " seconden tot sinterkerst 2016";
+}
+window.setTimeout(cntdown,1000);     
+}
+ 
+ 
+</script> 
+
+          <div class='algemenev'>
+            <h2>Algemene voorwaarden Sinterkerst 2016</h2>
+
+<p>Deze voorwaarden zijn van toepassing op iedere aanbieding en
+
+overeenkomst
+
+tussen de NSL en Sintekerstweekend 2016, hierna te noemen:
+
+“Gebruiker”, en een Opdrachtgever waarop Gebruiker deze voorwaarden
+
+van toepassing heeft verklaard, voor zover van deze voorwaarden niet
+
+  door partijen uitdrukkelijk en schriftelijk is afgeweken.</p>
+
+<p>De onderhavige voorwaarden zijn eveneens van toepassing op
+
+overeenkomsten met Gebruiker, voor de uitvoering waarvan door
+
+  Gebruiker derden dienen te worden betrokken.</p>
+
+<p>Deze algemene voorwaarden zijn eveneens geschreven voor de
+
+  medewerkers van Gebruiker en zijn directie.</p>
+
+<p>De toepasselijkheid van eventuele inkoop of andere voorwaarden van
+
+Opdrachtgever wordt uitdrukkelijk van de hand gewezen.<p>
+
+<p>Indien één of meerdere bepalingen in deze algemene voorwaarden op
+
+enig moment geheel of gedeeltelijk nietig zijn of vernietigd mochten
+
+worden, dan blijft het overigens in deze algemene voorwaarden
+
+bepaalde volledig van toepassing. Gebruiker en de Opdrachtgever
+
+zullen alsdan in overleg treden teneinde nieuwe bepalingen ter
+
+vervanging van de nietige of vernietigde bepalingen overeen te
+
+komen, waarbij zoveel als mogelijk het doel en de strekking van de
+
+oorspronkelijke bepalingen in acht wordt genomen. De deelnemers
+
+dienen zich te verzamelen op het clubhuis om drie uur in de middag.
+
+  Eenmaal aangekomen wachten hier verdere instructies.</p>
+
+<p>Bezwaren tegen de hoogte van de voldane factuur schorten de
+
+betalingsverplichting niet op en Gebruiker is uitsluitend
+
+  aansprakelijk voor directe schade aan materialen of mede-deelnemers.</p>
+
+<p>Indien onduidelijkheid bestaat omtrent de uitleg van één of meerdere
+
+bepalingen van deze algemene voorwaarden, dan dient de uitleg plaats
+
+te vinden ‘naar de geest’ van deze bepalingen doormiddel van een
+
+  mailtje naar kerstmetballen@noreply.nl</p>
+
+<p>Indien zich tussen partijen een situatie voordoet die niet in deze
+
+algemene voorwaarden geregeld is, dan dient deze situatie te worden
+
+beoordeeld naar de geest van deze algemene voorwaarden.</p>
+
+<p>Indien Gebruiker niet steeds strikte naleving van deze voorwaarden
+
+verlangt, betekent dit niet dat de bepalingen daarvan niet van
+
+toepassing zijn, of dat Gebruiker in enigerlei mate het recht zou
+
+verliezen om in andere gevallen de stipte naleving van de bepalingen
+
+  van deze voorwaarden te verlangen.</p>
+
+<p>De overeenkomst tussen Gebruiker en de Opdrachtgever wordt aangegaan
+
+voor bepaalde tijd, tenzij uit de aard van de overeenkomst anders
+
+voortvloeit of indien partijen uitdrukkelijk en schriftelijk anders
+
+  overeenkomen.</p>
+
+<p>Is voor de uitvoering van bepaalde werkzaamheden of voor de levering
+
+van bepaalde zaken een termijn overeengekomen of opgegeven, dan is
+
+dit nimmer een fatale termijn. Bij overschrijding van een termijn
+
+dient de Opdrachtgever Gebruiker derhalve schriftelijk in gebreke te
+
+stellen. Gebruiker dient daarbij een redelijke termijn te worden
+
+  geboden om alsnog uitvoering te geven aan de overeenkomst.</p>
+
+<p>Gebruiker zal de overeenkomst naar beste inzicht en vermogen en
+
+overeenkomstig de eisen van goed vakmanschap uitvoeren. Hiemee wordt
+
+niet bedoeld dat Gebruiker zo ontiegelijk veel zuipt dat Gebruiker
+
+de volgende dag door medeGebruiker opgehaald moet worden bij
+
+alcoholcontrole. Een en ander op grond van de op dat moment bekende
+
+  stand der wetenschap.</p>
+
+<p>Voor deze overeenkomst gelden enkele interessante, verfijnde,
+
+specifieke, weloverwogen, bijzondere, maar toch zeker belangrijke
+
+  regels.</p>
+
+<p>Er wordt van iedere Gebruiker verwacht dat deze een present meeneemt
+
+  dat aan verscheidene eisen voldoet.</p>
+
+<ul>
+ <li> 1 cadeau met een totaalbedrag van €5,00</li>
+
+ <li> Dit cadeau dient waterbestendig te zijn (dit zal worden getest)</li>
+
+ <li> Dit cadeau dient in de slaapkamer gebruikt te kunnen worden</li>
+
+ <li> Dit cadeau dient minimaal 100 cm. lang te zijn</li>
+
+ <li> Dit cadeau dient een gebruiksaanwijzing in poëtische vorm te
+
+bevatten</li>
+
+ <li> De gebruiksaanwijzing dient minimaal 5 regels lang te zijn</li>
+
+ <li> De gebruiksaanwijzing dient getypt te zijn in lettertype Arial,
+
+   lettergrootte 14</li>
+            </ul>
+            <p>Dit is zeker geen uitputtende lijst!</p>
+
+<p>Alle Gebruikers van dit evenement dienen te voldoen aan de volgende
+
+  dresscode:</p>
+
+<ul>
+<li> Iedere Gebruiker is verplicht om ondergoed te dragen</li>
+
+<li> Iedere Gebruiker dient minimaal 1 item te dragen dat aaansluit
+
+bij het thema ‘Kerst met ballen’</li>
+
+<li> Iedere Gebruiker dient met goed humeur het gebouw van de
+
+  overnachting te betreden</li>
+            </ul>
+
+<p>In de avond zal er rond 18:30 een centrale maaltijd genuttigd
+
+worden, waarbij op de presentie van iedere Gebruiker wordt gerekend.
+
+Mocht er een Gebruiker onverhoopt niet aanwezig kunnen zijn bij deze
+
+dis, dan dient dit door de betreffende Gebruiker schriftelijk
+
+ingediend te worden bij de commissie. Het bedrag van deelname zal in
+
+dergelijke situaties ongewijzigd blijven. Met eventuele allergieën
+
+of intoleranties zal uiteraard geen rekening gehouden worden.</p>
+
+<p>Door de Gebruikers dient een uitrusting meegenomen te worden waarmee
+
+op de grond overnacht kan worden. Bezwaren tegen de hoogte van de
+
+voldane factuur schorten de betalingsverplichting niet op en
+
+Gebruiker is uitsluitend aansprakelijk voor directe schade aan
+
+  materialen of mede-Gebruikers.</p>
+
+<p>Gebruiker behoudt zich de rechten en bevoegdheden voor die hem
+
+toekomen op grond van de Auteurswet en andere intellectuele wet- en
+
+regelgeving. Gebruiker heeft het recht de door de uitvoering van een
+
+overeenkomst aan zijn zijde toegenomen kennis ook voor andere
+
+doeleinden te gebruiken, voorzover hierbij geen strikt
+
+vertrouwelijke informatie van de Opdrachtgever ter kennis van derden
+
+  wordt gebracht.</p>    
+          </div>
+          <input type='checkbox'> Ja, ik ga akkoord met de algemene voorwaarden*
+          <small><i>*Let op: bovenstaande vinkje doet eigenlijk helemaal niks.</i></small>
+         
+        </div>
+      </div>
+    </div>      
+  
+  
+  </body>
+</html>
